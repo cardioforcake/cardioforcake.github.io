@@ -362,7 +362,6 @@ img{
 
     .w1,.w2,.w3,.w4,.w5,.w6,.w7{
         font-weight: 800;
-        color:rgb(102, 102, 102);
         font-size: 12px;
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(80px,1fr));
@@ -388,6 +387,7 @@ img{
 
     .desc{
         font-size: 11px;
+        color:rgb(65, 65, 65)
     }
 
     #day, .descSky, .descTemp, .descFeel, .descWind, .descHumid, .descRain, .descPop{
