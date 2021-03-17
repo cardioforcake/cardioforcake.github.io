@@ -367,7 +367,7 @@ img{
         grid-template-columns: repeat(auto-fill, minmax(80px,1fr));
         grid-template-rows: 1fr;
         border-bottom: 1px solid #d4d7d8;
-        padding-bottom: 10px;
+        padding-bottom: 12px;
     }
 
     .w2,.w3,.w4,.w5,.w6,.w7{
