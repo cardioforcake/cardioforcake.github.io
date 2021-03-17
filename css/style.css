@@ -238,6 +238,7 @@ input[type=sumit]{
     font-weight: 900;
     margin-left: auto;
     margin-right: auto;
+    color:#5a5001c9;
 }
 
 img{
@@ -364,7 +365,7 @@ img{
         color:rgb(102, 102, 102);
         font-size: 12px;
         display: grid;
-        grid-template-columns: repeat(auto-fill , minmax(60px,1fr));
+        grid-template-columns: repeat(auto-fill, minmax(79px,1fr));
         grid-template-rows: 1fr;
         border-bottom: 1px solid #d4d7d8;
     }
@@ -390,7 +391,7 @@ img{
     }
 
     #day, .descSky, .descTemp, .descFeel, .descWind, .descHumid, .descRain, .descPop{
-        height: 70px;
+        height: 50px;
         width: 70px;
         margin: 15px auto auto 15px;
     }
