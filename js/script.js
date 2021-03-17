@@ -121,6 +121,8 @@ $('.forecastSeven').click(function(){
     $('.descSky, .descTemp, .descFeel, .descWind, .descHumid, .descRain, .descPop').removeClass('descFive')
     $('.descSky, .descTemp, .descFeel, .descWind, .descHumid, .descRain, .descPop').removeClass('descThree')
     $('.descSky, .descTemp, .descFeel, .descWind, .descHumid, .descRain, .descPop').addClass('descSeven')
+    $('.desc, .descSky').removeClass('desc3')
+    $('.desc, .descSky').removeClass('desc5')
     $('.forecast').removeClass('hide')
     $('.forecast').removeClass('five')
     $('.forecast').removeClass('three')
@@ -134,6 +136,8 @@ $('.forecastFive').click(function(){
     $('.descSky, .descTemp, .descFeel, .descWind, .descHumid, .descRain, .descPop').removeClass('descThree')
     $('.descSky, .descTemp, .descFeel, .descWind, .descHumid, .descRain, .descPop').removeClass('descSeven')
     $('.descSky, .descTemp, .descFeel, .descWind, .descHumid, .descRain, .descPop').addClass('descFive')
+    $('.desc, .descSky').addClass('desc5')
+    $('.desc .descSky').removeClass('desc3')
     $('.forecast').removeClass('hide')
     $('.forecast').removeClass('seven')
     $('.forecast').removeClass('three')
@@ -148,6 +152,8 @@ $('.forecastThree').click(function(){
     $('.descSky, .descTemp, .descFeel, .descWind, .descHumid, .descRain, .descPop').removeClass('descFive')
     $('.descSky, .descTemp, .descFeel, .descWind, .descHumid, .descRain, .descPop').removeClass('descSeven')
     $('.descSky, .descTemp, .descFeel, .descWind, .descHumid, .descRain, .descPop').addClass('descThree')
+    $('.desc, .descSky').addClass('desc3')
+    $('.desc .descSky').removeClass('desc5')
     $('.forecast').removeClass('hide')
     $('.forecast').removeClass('five')
     $('.forecast').removeClass('seven')
@@ -203,14 +209,14 @@ function getData(ev){
 
 function updateCurrent(data){
     let newDate = new Date();
-    $('.city').html(`${city[0].toUpperCase() + city.substring(1).toLowerCase()}     <span class='regularFont'>${dayList2[newDate.getDay()]}, ${monthList[newDate.getMonth()]} ${dateList[newDate.getDate()]}</span>`)
-    $('.temp').text(`${(Number(data.current.temp)-273.15).toFixed(2)}°C`)
+    $('.city').html(`${city[0].toUpperCase() + city.substring(1).toLowerCase()} <span class='regularFont'>${dayList2[newDate.getDay()]}, ${monthList[newDate.getMonth()]} ${dateList[newDate.getDate()]}</span>`)
+    $('.temp').html((Number(data.current.temp)-273.15).toFixed(1)+'<span class="descCurrentTemp">°C</span>')
     $('.sky').text(data.current.weather[0].description)
-    $('.feel').html('<span class="descCurrent">Feels Like:</span><br>'+(Number(data.current.feels_like)-273.15).toFixed(2)+'<span class="desc2">°C</span>')
-    $('.wind').html('<span class="descCurrent">Wind:</span><br>'+(data.current.wind_speed*3.6).toFixed(2) + '<span class="descCurrent"> km/h</span>')
-    $('.humid').html('<span class="descCurrent">Humidity:</span><br>'+data.current.humidity+'<span class="descCurrent">%</span>')
+    $('.feel').html('<span class="descCurrent">Feels Like:</span><br>'+(Number(data.current.feels_like)-273.15).toFixed(1)+'<span class="desc2"> °C</span>')
+    $('.wind').html('<span class="descCurrent">Wind:</span><br>'+(data.current.wind_speed*3.6).toFixed(0) + '<span class="descCurrent"> km/h</span>')
+    $('.humid').html('<span class="descCurrent">Humidity:</span><br>'+data.current.humidity+'<span class="descCurrent"> %</span>')
     if(!!data.current.rain){
-        $('.rain').html('<span class="descCurrent">Rain:</span><br>'+data.current.rain['1h']+'<span class="descCurrent">mm</span>')
+        $('.rain').html('<span class="descCurrent">Rain:</span><br>'+(data.current.rain['1h']).toFixed(0)+'<span class="descCurrent"> mm</span>')
     }else{
         $('.rain').html('')
     }
@@ -232,27 +238,27 @@ function updateSky(day, idx){
 }
 
 function updateTemp(day, idx){
-    $(`.w${idx} > .descTemp`).html(`${(Number(day.temp.day)-273.15).toFixed(2)}<span class="desc2">°C</span>`)
+    $(`.w${idx} > .descTemp`).html('<span class="desc">Temp:</span><br>'+(Number(day.temp.day)-273.15).toFixed(1)+'<span class="desc"> °C</span>')
 }
 
 function updateFeel(day, idx){
-    $(`.w${idx}> .descFeel`).html('<span class="desc">Feels Like:</span><br>'+(Number(day.feels_like.day)-273.15).toFixed(2)+'<span class="desc2">°C</span>')
+    $(`.w${idx}> .descFeel`).html('<span class="desc">Feels Like:</span><br>'+(Number(day.feels_like.day)-273.15).toFixed(1)+'<span class="desc"> °C</span>')
 }
 
 function updateWind(day, idx){
-    $(`.w${idx}> .descWind`).html('<span class="desc">Wind:</span><br>'+(day.wind_speed*3.6).toFixed(2) + '<span class="desc">km/h</span>')
+    $(`.w${idx}> .descWind`).html('<span class="desc">Wind:</span><br>'+(day.wind_speed*3.6).toFixed(0) + '<span class="desc"> km/h</span>')
 }
 
 function updateHumidity(day, idx){
-    $(`.w${idx}> .descHumid`).html('<span class="desc">Humidity:</span><br>'+day.humidity+'<span class="desc">%</span>')
+    $(`.w${idx}> .descHumid`).html('<span class="desc">Humidity:</span><br>'+day.humidity+'<span class="desc"> %</span>')
 }
 
 function updateRain(day, idx){
     if(!!day.rain){
         $(`.w${idx}> .descRain`).removeClass('hide')
         $(`.w${idx}> .descPop`).removeClass('hide')
-        $(`.w${idx}> .descRain`).html('<span class="desc">Rain:</span><br>'+day.rain+'<span class="desc">mm</span>')
-        $(`.w${idx}> .descPop`).html('<span class="desc">P.o.P.:</span><br>'+(day.pop*100).toFixed(0)+'<span class="desc">%</span>')
+        $(`.w${idx}> .descRain`).html('<span class="desc">Rain:</span><br>'+(day.rain).toFixed(0)+'<span class="desc"> mm</span>')
+        $(`.w${idx}> .descPop`).html('<span class="desc">P.o.P.:</span><br>'+(day.pop*100).toFixed(0)+'<span class="desc"> %</span>')
     }else{
         $(`.w${idx}> .descRain`).addClass('hide')
         $(`.w${idx}> .descPop`).addClass('hide')

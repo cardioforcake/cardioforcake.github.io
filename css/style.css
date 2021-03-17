@@ -151,6 +151,11 @@ input[type=sumit]{
     margin: auto auto auto 10px;
 }
 
+.descCurrentTemp{
+    font-size: 25px;
+    font-weight: 100;
+}
+
 .sky{
     grid-column: span 6;
     text-transform:capitalize;
@@ -171,13 +176,6 @@ input[type=sumit]{
     margin: 0 auto;
     background-color: mintcream;
     border-radius: 5px;
-    grid-row-start: 4;
-}
-
-.invisible{
-    height: 50vh;
-    width: 100%;
-    margin: 0 auto;
     grid-row-start: 4;
 }
 
@@ -202,10 +200,12 @@ input[type=sumit]{
 
 .descThree{
     margin: 20px auto 15px 140px;
+    font-size: 18px;
 }
 
 .descFive{
     margin: 20px auto 15px 85px;
+    font-size: 16px;
 }
 
 .descSeven{
@@ -214,7 +214,7 @@ input[type=sumit]{
 
 .descSky{
     text-transform: capitalize;
-    font-size: 0.9em;
+    font-size: 12.5px;
     font-weight: 600;
 }
 
@@ -222,6 +222,14 @@ input[type=sumit]{
     font-weight: 100;
     font-size: 12px;
     color:rgb(88, 88, 88);
+}
+
+.desc3{
+    font-size: 16px;
+}
+
+.desc5{
+    font-size: 14px
 }
 
 .desc2{
@@ -327,7 +335,19 @@ img{
     }
 }
 
-@media (max-width: 760px){
+@media (max-width: 768px){
+    .desc3{
+        font-size: 12px;
+    }
+    
+    .desc5{
+        font-size: 12px
+    }
+
+    .descSeven{
+        font-size: 12px;
+    }
+
     .city{
         font-size: 22px;
         margin: 10px auto 10px 10px;
@@ -366,7 +386,7 @@ img{
         color:rgb(102, 102, 102);
         font-size: 12px;
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(79px,1fr));
+        grid-template-columns: repeat(auto-fill, minmax(80px,1fr));
         grid-template-rows: 1fr;
         border-bottom: 1px solid #d4d7d8;
     }
