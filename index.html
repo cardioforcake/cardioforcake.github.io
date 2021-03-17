@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+    <script defer src="./js/script.js"></script>
+    <link rel='stylesheet' href="./css/style.css"></link>
+</head>
+<body>
+
+    <main>
+        <header>Get the weather forecast for your city</header>
+        <nav>
+            <img src='https://i.imgur.com/kRqyucm.png'>
+            <form>
+                <input type='text' placeholder='Search for your city' class='entry'>
+                <input type=image src='https://i.imgur.com/MSxcJFH.png' alt='Submit' class='search'>
+            </form>
+        </nav>
+        <div class='menu hide'>
+            <div class='show'>Show Next:</div>
+            <div class='forecastThree menuItem'><span>Three Day Forecast</span><span id='chev'>»</span></div>
+            <div class='forecastFive menuItem'><span>Five Day Forecast</span><span id='chev'>»</span></div>
+            <div class='forecastSeven menuItem'><span>Seven Day Forecast</span><span id='chev'>»</span></div>
+            <div class='clear menuItem'><span>Hide Forecast</span><span id='chev'>»</span></div>
+        </div>
+        <div class='current w0'>
+            <div class='city'></div>
+            <!-- <div class='currentDate'></div> -->
+            <div class='temp'></div>
+            <div class='sky'></div>
+            <div class='feel'></div>
+            <div class='wind'></div>
+            <div class='humid'></div>
+            <div class='rain'></div>
+        </div>
+        <div class='invisible'></div>
+        <div class='forecast hide'>
+            <div class='daysSelected'></div>
+            <div class='w1'>
+                <div id='day'></div>
+                <div class='descSky'></div>
+                <div class='descTemp'></div>
+                <div class='descFeel'></div>
+                <div class='descWind'></div>
+                <div class='descHumid'></div>
+                <div class='descRain'></div>
+                <div class='descPop'></div>
+            </div>
+            <div class='w2'>
+                <div id='day'></div>
+                <div class='descSky'></div>
+                <div class='descTemp'></div>
+                <div class='descFeel'></div>
+                <div class='descWind'></div>
+                <div class='descHumid'></div>
+                <div class='descRain'></div>
+                <div class='descPop'></div>
+            </div>
+            <div class='w3'>
+                <div id='day'></div>
+                <div class='descSky'></div>
+                <div class='descTemp'></div>
+                <div class='descFeel'></div>
+                <div class='descWind'></div>
+                <div class='descHumid'></div>
+                <div class='descRain'></div>
+                <div class='descPop'></div>
+            </div>
+            <div class='w4'>
+                <div id='day'></div>
+                <div class='descSky'></div>
+                <div class='descTemp'></div>
+                <div class='descFeel'></div>
+                <div class='descWind'></div>
+                <div class='descHumid'></div>
+                <div class='descRain'></div>
+                <div class='descPop'></div>
+            </div>
+            <div class='w5'>
+                <div id='day'></div>
+                <div class='descSky'></div>
+                <div class='descTemp'></div>
+                <div class='descFeel'></div>
+                <div class='descWind'></div>
+                <div class='descHumid'></div>
+                <div class='descRain'></div>
+                <div class='descPop'></div>
+            </div>
+            <div class='w6'>
+                <div id='day'></div>
+                <div class='descSky'></div>
+                <div class='descTemp'></div>
+                <div class='descFeel'></div>
+                <div class='descWind'></div>
+                <div class='descHumid'></div>
+                <div class='descRain'></div>
+                <div class='descPop'></div>
+            </div>
+            <div class='w7'>
+                <div id='day'></div>
+                <div class='descSky'></div>
+                <div class='descTemp'></div>
+                <div class='descFeel'></div>
+                <div class='descWind'></div>
+                <div class='descHumid'></div>
+                <div class='descRain'></div>
+                <div class='descPop'></div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
