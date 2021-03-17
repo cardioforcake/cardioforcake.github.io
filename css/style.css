@@ -388,6 +388,7 @@ img{
     .desc{
         font-size: 11px;
         color:black;
+    }
 
     #day, .descSky, .descTemp, .descFeel, .descWind, .descHumid, .descRain, .descPop{
         height: 45px;
