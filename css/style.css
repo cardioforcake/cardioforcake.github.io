@@ -346,11 +346,11 @@ img{
     }
     
     .feel, .wind, .humid, .rain{
-        font-size: 13px;
+        font-size: 14px;
     }
 
     .descCurrent{
-        font-size: 12px;
+        font-size: 13px;
     }
 
     .daysSelected{
@@ -386,7 +386,7 @@ img{
     }
 
     .desc{
-        font-size: 11px;
+        font-size: 12px;
         color:black;
     }
 
