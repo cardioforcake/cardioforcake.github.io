@@ -5,6 +5,7 @@
 body{
     background-image: linear-gradient(#33587A, lightblue);
     font-family: Helvetica;
+    min-height: 100vh;
 }
 
 main {
@@ -284,7 +285,19 @@ img{
     display: none;
 }
 
-@media (max-width: 1440px){
+@media (max-width: 1445px){
+    .descThree{
+        margin: 20px auto 15px 80px;
+    }
+    .descFive{
+        margin: 20px auto 15px 50px;
+    }
+    .descSeven{
+        margin: 20px auto 15px 40px;
+    }
+}
+
+@media (max-width: 1240px){
     .descThree{
         margin: 20px auto 15px 80px;
     }
