@@ -153,7 +153,7 @@ $('.forecastThree').click(function(){
     $('.descSky, .descTemp, .descFeel, .descWind, .descHumid, .descRain, .descPop').removeClass('descSeven')
     $('.descSky, .descTemp, .descFeel, .descWind, .descHumid, .descRain, .descPop').addClass('descThree')
     $('.desc, .descSky').addClass('desc3')
-    $('.desc .descSky').removeClass('desc5')
+    $('.desc, .descSky').removeClass('desc5')
     $('.forecast').removeClass('hide')
     $('.forecast').removeClass('five')
     $('.forecast').removeClass('seven')

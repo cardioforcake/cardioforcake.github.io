@@ -199,17 +199,17 @@ input[type=sumit]{
 }
 
 .descThree{
-    margin: 20px auto 15px 140px;
+    margin: 20px auto 15px 300px;
     font-size: 18px;
 }
 
 .descFive{
-    margin: 20px auto 15px 85px;
+    margin: 20px auto 15px 160px;
     font-size: 16px;
 }
 
 .descSeven{
-    margin: 20px auto 15px 60px;
+    margin: 20px auto 15px 90px;
 }
 
 .descSky{
@@ -295,19 +295,43 @@ img{
     display: none;
 }
 
-@media (max-width: 1260px){
+@media (max-width: 2100px){
+    .descThree{
+        margin: 20px auto 15px 240px;
+    }
+    .descFive{
+        margin: 20px auto 15px 100px;
+    }
+    .descSeven{
+        margin: 20px auto 15px 70px;
+    }
+}
+
+@media (max-width: 1700px){
+    .descThree{
+        margin: 20px auto 15px 180px;
+    }
+    .descFive{
+        margin: 20px auto 15px 85px;
+    }
+    .descSeven{
+        margin: 20px auto 15px 65px;
+    }
+}
+
+@media (max-width: 1350px){
     .descThree{
         margin: 20px auto 15px 110px;
     }
     .descFive{
-        margin: 20px auto 15px 65px;
+        margin: 20px auto 15px 60px;
     }
     .descSeven{
-        margin: 20px auto 15px 40px;
+        margin: 20px auto 15px 45px;
     }
 }
 
-@media (max-width: 1023px){
+@media (max-width: 1020px){
     .descThree{
         margin: 20px auto 15px 80px;
     }
@@ -325,13 +349,13 @@ img{
         margin: 20px auto 15px 35px;
     }
     .descSeven{
-        margin: 20px auto 15px 20px;
+        margin: 20px auto 15px 25px;
     }
 }
 
 @media (max-width: 850px){
     .descSeven{
-        margin: 20px auto 15px 12px;
+        margin: 20px auto 15px 14px;
     }
 }
 
@@ -345,6 +369,14 @@ img{
     }
 
     .descSeven{
+        font-size: 12px;
+    }
+
+    .descFive{
+        font-size: 12px;
+    }
+
+    .descThree{
         font-size: 12px;
     }
 
