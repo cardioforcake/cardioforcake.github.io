@@ -201,15 +201,15 @@ input[type=sumit]{
 }
 
 .descThree{
-    margin: 20px auto 15px 100px;
+    margin: 20px auto 15px 140px;
 }
 
 .descFive{
-    margin: 20px auto 15px 60px;
+    margin: 20px auto 15px 85px;
 }
 
 .descSeven{
-    margin: 20px auto 15px 40px;
+    margin: 20px auto 15px 60px;
 }
 
 .descSky{
@@ -285,19 +285,19 @@ img{
     display: none;
 }
 
-@media (max-width: 1445px){
+@media (max-width: 1260px){
     .descThree{
-        margin: 20px auto 15px 80px;
+        margin: 20px auto 15px 110px;
     }
     .descFive{
-        margin: 20px auto 15px 50px;
+        margin: 20px auto 15px 65px;
     }
     .descSeven{
         margin: 20px auto 15px 40px;
     }
 }
 
-@media (max-width: 1240px){
+@media (max-width: 1023px){
     .descThree{
         margin: 20px auto 15px 80px;
     }
@@ -305,8 +305,9 @@ img{
         margin: 20px auto 15px 50px;
     }
     .descSeven{
-        margin: 20px auto 15px 40px;
+        margin: 20px auto 15px 30px;
     }
+
 }
 
 @media (max-width: 950px){
@@ -315,6 +316,12 @@ img{
     }
     .descSeven{
         margin: 20px auto 15px 20px;
+    }
+}
+
+@media (max-width: 850px){
+    .descSeven{
+        margin: 20px auto 15px 12px;
     }
 }
 

@@ -113,7 +113,7 @@ $('.image').click(function(){
     $('.menu').toggleClass('hide')
 })
 
-$('.current, .invisible, .forecast, header, form').click(function(){
+$('.current, .forecast, header, form').click(function(){
     $('.menu').addClass('hide')
 })
 
@@ -121,7 +121,6 @@ $('.forecastSeven').click(function(){
     $('.descSky, .descTemp, .descFeel, .descWind, .descHumid, .descRain, .descPop').removeClass('descFive')
     $('.descSky, .descTemp, .descFeel, .descWind, .descHumid, .descRain, .descPop').removeClass('descThree')
     $('.descSky, .descTemp, .descFeel, .descWind, .descHumid, .descRain, .descPop').addClass('descSeven')
-    $('.invisible').addClass('hide')
     $('.forecast').removeClass('hide')
     $('.forecast').removeClass('five')
     $('.forecast').removeClass('three')
@@ -135,7 +134,6 @@ $('.forecastFive').click(function(){
     $('.descSky, .descTemp, .descFeel, .descWind, .descHumid, .descRain, .descPop').removeClass('descThree')
     $('.descSky, .descTemp, .descFeel, .descWind, .descHumid, .descRain, .descPop').removeClass('descSeven')
     $('.descSky, .descTemp, .descFeel, .descWind, .descHumid, .descRain, .descPop').addClass('descFive')
-    $('.invisible').addClass('hide')
     $('.forecast').removeClass('hide')
     $('.forecast').removeClass('seven')
     $('.forecast').removeClass('three')
@@ -150,7 +148,6 @@ $('.forecastThree').click(function(){
     $('.descSky, .descTemp, .descFeel, .descWind, .descHumid, .descRain, .descPop').removeClass('descFive')
     $('.descSky, .descTemp, .descFeel, .descWind, .descHumid, .descRain, .descPop').removeClass('descSeven')
     $('.descSky, .descTemp, .descFeel, .descWind, .descHumid, .descRain, .descPop').addClass('descThree')
-    $('.invisible').addClass('hide')
     $('.forecast').removeClass('hide')
     $('.forecast').removeClass('five')
     $('.forecast').removeClass('seven')
@@ -162,7 +159,6 @@ $('.forecastThree').click(function(){
 })
 
 $('.clear').click(function(){
-    $('.invisible').removeClass('hide')
     $('.forecast').addClass('hide')
     $('.menu').addClass('hide')
 })
@@ -182,7 +178,6 @@ function getData(ev){
             }).then(
                 function(data){
                     $('.forecast').addClass('hide')
-                    $('.invisible').removeClass('hide')
                     updateCurrent(data)
                     updateDay()
                     console.log(data)
