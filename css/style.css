@@ -13,7 +13,7 @@ main {
     grid-template-rows: 30px 40px 210px auto;
     grid-template-columns: 1fr;
     width: 95%;
-    margin: 0 auto 15px auto;
+    margin: 0 auto 20px auto;
     height: 100%;
 }
 
@@ -177,6 +177,7 @@ input[type=sumit]{
     background-color: mintcream;
     border-radius: 5px;
     grid-row-start: 4;
+    padding-bottom: 20px;
 }
 
 .w1,.w2,.w3,.w4,.w5,.w6,.w7{
@@ -360,6 +361,10 @@ img{
 }
 
 @media (max-width: 768px){
+    .forecast{
+        padding-bottom: 0;
+    }
+
     .desc3{
         font-size: 12px;
     }
