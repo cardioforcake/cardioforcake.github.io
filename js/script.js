@@ -130,6 +130,7 @@ $('.forecastSeven').click(function(){
     $('.daysSelected').text('Next 7 Days')
     $('.menu').addClass('hide')
     $('.w1, .w2, .w3, .w4, .w5, .w6, .w7').removeClass('hide')
+    $('.w1,.w2,.w3,.w4,.w5,.w6,.w7').removeClass('largeFont')
 })
 
 $('.forecastFive').click(function(){
@@ -146,6 +147,7 @@ $('.forecastFive').click(function(){
     $('.menu').addClass('hide')
     $('.w1, .w2, .w3, .w4, .w5').removeClass('hide')
     $('.w6, .w7').addClass('hide')
+    $('.w1,.w2,.w3,.w4,.w5,.w6,.w7').removeClass('largeFont')
 })
 
 $('.forecastThree').click(function(){
@@ -162,6 +164,7 @@ $('.forecastThree').click(function(){
     $('.menu').addClass('hide')
     $('.w1, .w2, .w3').removeClass('hide')
     $('.w4, .w5, .w6, .w7').addClass('hide')
+    $('.w1,.w2,.w3,.w4,.w5,.w6,.w7').addClass('largeFont')
 })
 
 $('.clear').click(function(){

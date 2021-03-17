@@ -177,7 +177,7 @@ input[type=sumit]{
     background-color: mintcream;
     border-radius: 5px;
     grid-row-start: 4;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
 
 .w1,.w2,.w3,.w4,.w5,.w6,.w7{
@@ -187,30 +187,36 @@ input[type=sumit]{
     font-size: 14px;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-columns: 1fr;
+    grid-template-columns: 70px
+}
+
+.largeFont{
+    grid-template-columns: 90px;
 }
 
 .w1,.w2,.w3,.w4,.w5,.w6{
     border-right: 1px solid #d4d7d8;
 }
 
-.descSky, .descTemp, .descFeel, .descWind, .descHumid, .descRain, .descPop{
-    text-align: left;
+.descTemp, .descFeel, .descWind, .descHumid, .descRain, .descPop{
+    margin-bottom: 15px;
     /* border-bottom: 1px solid #d4d7d8; */
 }
 
+.descFeel, .descWind, .descHumid, .descRain, .descPop{
+    margin-top: 15px;
+}
+
+.descTemp{
+    margin-top: 5px;
+}
+
 .descThree{
-    margin: 20px auto 15px 300px;
     font-size: 18px;
 }
 
 .descFive{
-    margin: 20px auto 15px 160px;
     font-size: 16px;
-}
-
-.descSeven{
-    margin: 20px auto 15px 90px;
 }
 
 .descSky{
@@ -270,7 +276,7 @@ img{
 
 .daysSelected{
     grid-column: span 7;
-    padding: 15px 0 15px 20px;
+    padding: 15px 0 10px 20px;
     color:rgb(90, 90, 90);
 }
 
@@ -294,70 +300,6 @@ img{
 
 .hide{
     display: none;
-}
-
-@media (max-width: 2100px){
-    .descThree{
-        margin: 20px auto 15px 240px;
-    }
-    .descFive{
-        margin: 20px auto 15px 100px;
-    }
-    .descSeven{
-        margin: 20px auto 15px 70px;
-    }
-}
-
-@media (max-width: 1700px){
-    .descThree{
-        margin: 20px auto 15px 180px;
-    }
-    .descFive{
-        margin: 20px auto 15px 85px;
-    }
-    .descSeven{
-        margin: 20px auto 15px 65px;
-    }
-}
-
-@media (max-width: 1350px){
-    .descThree{
-        margin: 20px auto 15px 110px;
-    }
-    .descFive{
-        margin: 20px auto 15px 60px;
-    }
-    .descSeven{
-        margin: 20px auto 15px 45px;
-    }
-}
-
-@media (max-width: 1020px){
-    .descThree{
-        margin: 20px auto 15px 80px;
-    }
-    .descFive{
-        margin: 20px auto 15px 50px;
-    }
-    .descSeven{
-        margin: 20px auto 15px 30px;
-    }
-
-}
-
-@media (max-width: 950px){
-    .descFive{
-        margin: 20px auto 15px 35px;
-    }
-    .descSeven{
-        margin: 20px auto 15px 25px;
-    }
-}
-
-@media (max-width: 850px){
-    .descSeven{
-        margin: 20px auto 15px 14px;
-    }
 }
 
 @media (max-width: 768px){
@@ -414,7 +356,7 @@ img{
     .daysSelected{
         grid-column: span 1;
         grid-row: span 1;
-        padding: 15px 0 15px 20px;
+        /* padding: 15px 0 15px 20px; */
 
     }
 
@@ -449,9 +391,9 @@ img{
     }
 
     #day, .descSky, .descTemp, .descFeel, .descWind, .descHumid, .descRain, .descPop{
-        height: 50px;
+        height: 45px;
         width: 70px;
-        margin: 15px auto auto 15px;
+        margin: 10px auto auto 15px;
     }
 
     #day{
