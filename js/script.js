@@ -109,7 +109,7 @@ function initial(){
 };
 
 $('form').on('submit', getData)
-$('img').click(function(){
+$('.image').click(function(){
     $('.menu').toggleClass('hide')
 })
 

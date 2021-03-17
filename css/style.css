@@ -245,6 +245,17 @@ img{
     margin: auto 0 auto 10px;
 }
 
+.image{
+    display: flex;
+    align-content: center;
+}
+
+#menu{
+    margin: auto;
+    color: white;
+    font-size: 12px;
+}
+
 .daysSelected{
     grid-column: span 7;
     padding: 15px 0 15px 20px;
