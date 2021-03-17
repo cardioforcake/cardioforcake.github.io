@@ -375,7 +375,7 @@ img{
     }
 
     main {
-        grid-template-rows: 30px 40px 170px auto;
+        grid-template-rows: 30px 40px 170px auto;s
     }
 
     .entry{
@@ -395,7 +395,7 @@ img{
         color:black;
     }
 
-    #day, .descSky, .descTemp, .descFeel, .descWind, .descHumid, .descRain, .descPop{
+    .descSky, .descTemp, .descFeel, .descWind, .descHumid, .descRain, .descPop{
         height: 45px;
         width: 70px;
         margin: 10px auto auto 15px;
@@ -404,6 +404,9 @@ img{
     #day{
       text-align: left; 
       font-size: 15px;
+      height: 45px;
+      width: 70px;
+      margin: 9px auto auto 15px;
     }
 
     .seven{
