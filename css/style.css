@@ -134,7 +134,7 @@ input[type=sumit]{
 .city{
     grid-column: span 8;
     font-size: 25px;
-    margin: 10px auto 10px 10px;
+    margin: 20px auto 10px 10px;
 }
 .regularFont{
     font-weight: 100;
@@ -308,6 +308,7 @@ img{
 @media (max-width: 760px){
     .city{
         font-size: 22px;
+        margin: 10px auto 10px 10px;
     }
   
     header{
