@@ -93,17 +93,17 @@ input[type=sumit]{
     grid-column-start: 1;
     width: 180px;
     height: 185px;
-    background-color: mintcream;
+    background-color: darkslateblue;
     z-index: 1;
     border-radius: 1px;
-    color: black;
+    color: white;
     display: grid;
     grid-template-rows: 40px 35px 35px 35px 35px;
     grid-template-columns: 1fr;
 }
 
 .menuItem{
-    border-top: 1px solid #d4d7d8;
+    border-top: 1px solid white;
     font-size: 15px;
     display: flex;
     justify-content: space-between;
