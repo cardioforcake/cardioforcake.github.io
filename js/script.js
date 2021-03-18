@@ -132,10 +132,14 @@ $('.image').click(function(){
     }
 })
 
-$('.current, .forecast, header, form').click(function(){
+$('body').click(function(){
     if($('.menu').hasClass('canTouch')){
         retractMenu()
     }
+})
+
+$('.menu').click(function(event){
+    event.stopPropagation()
 })
 
 $('.celcius').click(function(){
