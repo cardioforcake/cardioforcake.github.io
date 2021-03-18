@@ -114,6 +114,30 @@ input[type=sumit]{
     display: grid;
     grid-template-rows: 40px 35px 35px 35px 35px;
     grid-template-columns: 1fr;
+    /* animation: scale ease-in 4s; */
+    /* transition: all .5s ease; */
+}
+
+.hide3{
+    animation: scale ease 0.5s;
+}
+
+@keyframes scale{
+    0%{opacity:0; transform:translateY(-60px)}
+    50%{opacity: 0}
+    80%{opacity: 0.8}
+    100%{opacity:1; transform:translateY(0)}
+}
+
+.hide4{
+    animation: scaleBack ease 0.5s;
+}
+
+@keyframes scaleBack{
+    0%{opacity:1; transform:translateY(0)}
+    20%{opacity: 0.8}
+    40%{opacity: 0}
+    100%{opacity:0; transform:translateY(-30px)}
 }
 
 .menuItem{
@@ -319,6 +343,7 @@ img{
 .hide{
     display: none;
 }
+
 
 @media (max-width: 768px){
     .forecast{

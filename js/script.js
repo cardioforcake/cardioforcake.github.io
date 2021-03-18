@@ -125,11 +125,17 @@ function initial(){
 $('form').on('submit', getData)
 
 $('.image').click(function(){
-    $('.menu').toggleClass('hide')
+    if($('.menu').hasClass('hide')){
+        dropMenu()
+    }else if($('.menu').hasClass('canTouch')){
+        retractMenu()
+    }
 })
 
 $('.current, .forecast, header, form').click(function(){
-    $('.menu').addClass('hide')
+    if($('.menu').hasClass('canTouch')){
+        retractMenu()
+    }
 })
 
 $('.celcius').click(function(){
@@ -144,59 +150,95 @@ $('.fahren').click(function(){
 
 
 $('.forecastSeven').click(function(){
-    $('.descSky, .descTemp, .descTempF, .descFeel, .descFeelF, .descWind, .descWindF, .descHumid, .descRain, .descRainF, .descPop').removeClass('descFive')
-    $('.descSky, .descTemp, .descTempF, .descFeel, .descFeelF, .descWind, .descWindF, .descHumid, .descRain, .descRainF, .descPop').removeClass('descThree')
-    $('.descSky, .descTemp, .descTempF, .descFeel, .descFeelF, .descWind, .descWindF, .descHumid, .descRain, .descRainF, .descPop').addClass('descSeven')
-    $('.desc, .descSky').removeClass('desc3')
-    $('.desc, .descSky').removeClass('desc5')
-    $('.forecast').removeClass('hide')
-    $('.forecast').removeClass('five')
-    $('.forecast').removeClass('three')
-    $('.forecast').addClass('seven')
-    $('.daysSelected').text('Next 7 Days')
-    $('.menu').addClass('hide')
-    $('.w1, .w2, .w3, .w4, .w5, .w6, .w7').removeClass('hide')
-    $('.w1,.w2,.w3,.w4,.w5,.w6,.w7').removeClass('largeFont')
+    if(!$('.menu').hasClass('dontTouch')){
+        $('.descSky, .descTemp, .descTempF, .descFeel, .descFeelF, .descWind, .descWindF, .descHumid, .descRain, .descRainF, .descPop').removeClass('descFive')
+        $('.descSky, .descTemp, .descTempF, .descFeel, .descFeelF, .descWind, .descWindF, .descHumid, .descRain, .descRainF, .descPop').removeClass('descThree')
+        $('.descSky, .descTemp, .descTempF, .descFeel, .descFeelF, .descWind, .descWindF, .descHumid, .descRain, .descRainF, .descPop').addClass('descSeven')
+        $('.desc, .descSky').removeClass('desc3')
+        $('.desc, .descSky').removeClass('desc5')
+        $('.forecast').removeClass('hide')
+        $('.forecast').removeClass('five')
+        $('.forecast').removeClass('three')
+        $('.forecast').addClass('seven')
+        $('.daysSelected').text('Next 7 Days')
+        $('.w1, .w2, .w3, .w4, .w5, .w6, .w7').removeClass('hide')
+        $('.w1,.w2,.w3,.w4,.w5,.w6,.w7').removeClass('largeFont')
+        if($('.menu').hasClass('canTouch')){
+            retractMenu()
+        }
+    }
 })
 
 $('.forecastFive').click(function(){
-    $('.descSky, .descTemp, .descTempF, .descFeel, .descFeelF, .descWind, .descWindF, .descHumid, .descRain, .descRainF, .descPop').removeClass('descThree')
-    $('.descSky, .descTemp, .descTempF, .descFeel, .descFeelF, .descWind, .descWindF, .descHumid, .descRain, .descRainF, .descPop').removeClass('descSeven')
-    $('.descSky, .descTemp, .descTempF, .descFeel, .descFeelF, .descWind, .descWindF, .descHumid, .descRain, .descRainF, .descPop').addClass('descFive')
-    $('.desc, .descSky').addClass('desc5')
-    $('.desc .descSky').removeClass('desc3')
-    $('.forecast').removeClass('hide')
-    $('.forecast').removeClass('seven')
-    $('.forecast').removeClass('three')
-    $('.forecast').addClass('five')
-    $('.daysSelected').text('Next 5 Days')
-    $('.menu').addClass('hide')
-    $('.w1, .w2, .w3, .w4, .w5').removeClass('hide')
-    $('.w6, .w7').addClass('hide')
-    $('.w1,.w2,.w3,.w4,.w5,.w6,.w7').removeClass('largeFont')
+    if(!$('.menu').hasClass('dontTouch')){
+        $('.descSky, .descTemp, .descTempF, .descFeel, .descFeelF, .descWind, .descWindF, .descHumid, .descRain, .descRainF, .descPop').removeClass('descThree')
+        $('.descSky, .descTemp, .descTempF, .descFeel, .descFeelF, .descWind, .descWindF, .descHumid, .descRain, .descRainF, .descPop').removeClass('descSeven')
+        $('.descSky, .descTemp, .descTempF, .descFeel, .descFeelF, .descWind, .descWindF, .descHumid, .descRain, .descRainF, .descPop').addClass('descFive')
+        $('.desc, .descSky').addClass('desc5')
+        $('.desc .descSky').removeClass('desc3')
+        $('.forecast').removeClass('hide')
+        $('.forecast').removeClass('seven')
+        $('.forecast').removeClass('three')
+        $('.forecast').addClass('five')
+        $('.daysSelected').text('Next 5 Days')
+        $('.w1, .w2, .w3, .w4, .w5').removeClass('hide')
+        $('.w6, .w7').addClass('hide')
+        $('.w1,.w2,.w3,.w4,.w5,.w6,.w7').removeClass('largeFont')
+        if($('.menu').hasClass('canTouch')){
+            retractMenu()
+        }
+    }
 })
 
 $('.forecastThree').click(function(){
-    $('.descSky, .descTemp, .descTempF, .descFeel, .descFeelF, .descWind, .descWindF, .descHumid, .descRain, .descRainF, .descPop').removeClass('descFive')
-    $('.descSky, .descTemp, .descTempF, .descFeel, .descFeelF, .descWind, .descWindF, .descHumid, .descRain, .descRainF, .descPop').removeClass('descSeven')
-    $('.descSky, .descTemp, .descTempF, .descFeel, .descFeelF, .descWind, .descWindF, .descHumid, .descRain, .descRainF, .descPop').addClass('descThree')
-    $('.desc, .descSky').addClass('desc3')
-    $('.desc, .descSky').removeClass('desc5')
-    $('.forecast').removeClass('hide')
-    $('.forecast').removeClass('five')
-    $('.forecast').removeClass('seven')
-    $('.forecast').addClass('three')
-    $('.daysSelected').text('Next 3 Days')
-    $('.menu').addClass('hide')
-    $('.w1, .w2, .w3').removeClass('hide')
-    $('.w4, .w5, .w6, .w7').addClass('hide')
-    $('.w1,.w2,.w3,.w4,.w5,.w6,.w7').addClass('largeFont')
+    if(!$('.menu').hasClass('dontTouch')){
+        $('.descSky, .descTemp, .descTempF, .descFeel, .descFeelF, .descWind, .descWindF, .descHumid, .descRain, .descRainF, .descPop').removeClass('descFive')
+        $('.descSky, .descTemp, .descTempF, .descFeel, .descFeelF, .descWind, .descWindF, .descHumid, .descRain, .descRainF, .descPop').removeClass('descSeven')
+        $('.descSky, .descTemp, .descTempF, .descFeel, .descFeelF, .descWind, .descWindF, .descHumid, .descRain, .descRainF, .descPop').addClass('descThree')
+        $('.desc, .descSky').addClass('desc3')
+        $('.desc, .descSky').removeClass('desc5')
+        $('.forecast').removeClass('hide')
+        $('.forecast').removeClass('five')
+        $('.forecast').removeClass('seven')
+        $('.forecast').addClass('three')
+        $('.daysSelected').text('Next 3 Days')
+        $('.w1, .w2, .w3').removeClass('hide')
+        $('.w4, .w5, .w6, .w7').addClass('hide')
+        $('.w1,.w2,.w3,.w4,.w5,.w6,.w7').addClass('largeFont')
+        if($('.menu').hasClass('canTouch')){
+            retractMenu()
+        }
+    }
 })
 
 $('.clear').click(function(){
-    $('.forecast').addClass('hide')
-    $('.menu').addClass('hide')
+    if(!$('.menu').hasClass('dontTouch')){
+        $('.forecast').addClass('hide')
+        if($('.menu').hasClass('canTouch')){
+            retractMenu()
+        }
+    }
 })
+
+function dropMenu(){
+    $('.menu').removeClass('hide')
+    $('.menu').addClass('hide3')
+    setTimeout(()=>{
+        $('.menu').removeClass('dontTouch')
+        $('.menu').addClass('canTouch')
+    }, 400)
+}
+
+function retractMenu(){
+    $('.menu').removeClass('canTouch')
+    $('.menu').removeClass('hide3')
+    $('.menu').addClass('hide4')
+    $('.menu').addClass('dontTouch')
+    setTimeout(() => {
+        $('.menu').addClass('hide')
+        $('.menu').removeClass('hide4')
+    }, 400);
+}
 
 
 function setCelcius(){
