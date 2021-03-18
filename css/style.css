@@ -31,10 +31,13 @@ header{
     justify-content: space-between;
 }
 
-.fahren, .celcius{
-    margin-right: 15px;
-    margin-left: 10px;
+/* .fahren{
+    margin-left: 1px;
 }
+
+.celcius{
+    margin-right: 1px;;  
+} */
 
 .measurement{
     color:#FBE751;
@@ -187,7 +190,7 @@ input[type=sumit]{
     background-color: mintcream;
     border-radius: 5px;
     grid-row-start: 4;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
 }
 
 .w1,.w2,.w3,.w4,.w5,.w6,.w7{
