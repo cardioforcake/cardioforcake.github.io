@@ -28,6 +28,16 @@ header{
     font-size: 16px;
     opacity: 0.9;
     grid-row-start: 1;
+    justify-content: space-between;
+}
+
+.fahren, .celcius{
+    margin-right: 15px;
+    margin-left: 10px;
+}
+
+.measurement{
+    color:#FBE751;
 }
 
 nav{
@@ -142,7 +152,7 @@ input[type=sumit]{
     font-size: 12px;
 }
 
-.temp{
+.temp, .tempF{
     grid-column: span 2;
     color: #FBE751;
     font-size: 40px;
@@ -165,7 +175,7 @@ input[type=sumit]{
     margin: auto auto auto 10px;
 }
 
-.feel, .wind, .humid, .rain{
+.feel, .feelF, .wind, .windF, .humid, .rain, .rainF{
     grid-column: span 2;
     margin: auto auto 25px 10px;
 }
@@ -198,16 +208,16 @@ input[type=sumit]{
     border-right: 1px solid #d4d7d8;
 }
 
-.descTemp, .descFeel, .descWind, .descHumid, .descRain, .descPop{
+.descTemp, .descTempF, .descFeel, .descFeelF, .descWind, .descWindF, .descHumid, .descRain, .descRainF, .descPop{
     margin-bottom: 15px;
     /* border-bottom: 1px solid #d4d7d8; */
 }
 
-.descFeel, .descWind, .descHumid, .descRain, .descPop{
+.descFeel, .descFeelF, .descWind, .descWindF, .descHumid, .descRain, .descRainF, .descPop{
     margin-top: 15px;
 }
 
-.descTemp{
+.descTemp, .descTempF{
     margin-top: 5px;
 }
 
@@ -228,6 +238,11 @@ input[type=sumit]{
 .desc{
     font-weight: 100;
     font-size: 12px;
+    color:rgb(88, 88, 88);
+}
+
+.descc{
+    font-weight: 100;
     color:rgb(88, 88, 88);
 }
 
@@ -258,7 +273,7 @@ input[type=sumit]{
 }
 
 img{
-    width:45px;
+    width:36px;
     height: 20px;
     margin: auto 0 auto 10px;
 }
@@ -307,23 +322,11 @@ img{
         padding-bottom: 0;
     }
 
-    .desc3{
-        font-size: 12px;
-    }
-    
-    .desc5{
-        font-size: 12px
+    .descSeven, .descFive, .descThree{
+        font-size: 13px;
     }
 
-    .descSeven{
-        font-size: 12px;
-    }
-
-    .descFive{
-        font-size: 12px;
-    }
-
-    .descThree{
+    .desc3, .desc5, .descSky{
         font-size: 12px;
     }
 
@@ -336,7 +339,7 @@ img{
         font-size: 12px;
     }
     
-    .temp{
+    .temp, .tempF{
         grid-column: span 3;
         font-size: 30px;
     }
@@ -345,7 +348,7 @@ img{
         grid-column: span 5;
     }
     
-    .feel, .wind, .humid, .rain{
+    .feel, .feelF, .wind, .windF, .humid, .rain, .rainF{
         font-size: 14px;
     }
 
@@ -395,7 +398,7 @@ img{
         color:black;
     }
 
-    .descSky, .descTemp, .descFeel, .descWind, .descHumid, .descRain, .descPop{
+    .descSky, .descTemp, .descTempF, .descFeel, .descFeelF, .descWind, .descWindF, .descHumid, .descRain, .descRainF, .descPop{
         height: 45px;
         width: 70px;
         margin: 10px auto auto 15px;
@@ -427,16 +430,19 @@ img{
     .hide{
         display: none;
     }
+    .hideRain{
+        display: none;
+    }
 }
 
 @media (max-width: 370px){
     .city{
         margin-left: 0;
     }  
-    .temp{
+    .temp, .tempF{
         margin-left: 0;
     }
-    .feel, .wind, .humid, .rain{
+    .feel, .feelF, .wind, .windF, .humid, .rain, .rainF{
         margin-left: 0;
     }
 }
