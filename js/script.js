@@ -309,8 +309,13 @@ function updateCurrent(data){
     $('.windF').html('<span class="descCurrent">Wind:</span><br>'+(data.current.wind_speed*2.237).toFixed(0) + '<span class="descCurrent"> mph</span>')
     $('.humid').html('<span class="descCurrent">Humidity:</span><br>'+data.current.humidity+'<span class="descCurrent"> %</span>')
     if(!!data.current.rain){
-        $('.rain').html('<span class="descCurrent">Rain:</span><br>'+(data.current.rain['1h']).toFixed(0)+'<span class="descCurrent"> mm</span>')
-        $('.rainF').html('<span class="descCurrent">Rain:</span><br>'+(data.current.rain['1h']/25.4).toFixed(2)+'<span class="descCurrent"> in</span>')
+        if(data.current.rain['1h'].toFixed(0)<1){
+            $('.rain').html('<span class="descCurrent">Rain:</span><br>'+'< 1'+'<span class="descCurrent"> mm</span>')
+            $('.rainF').html('<span class="descCurrent">Rain:</span><br>'+'< 0.02'+'<span class="descCurrent"> in</span>')
+        }else{
+            $('.rain').html('<span class="descCurrent">Rain:</span><br>'+(data.current.rain['1h']).toFixed(0)+'<span class="descCurrent"> mm</span>')
+            $('.rainF').html('<span class="descCurrent">Rain:</span><br>'+(data.current.rain['1h']/25.4).toFixed(2)+'<span class="descCurrent"> in</span>')
+        }
     }else{
         $('.rain').html('')
         $('.rainF').html('')
@@ -356,9 +361,16 @@ function updateRain(day, idx){
         $(`.w${idx}> .descRain`).removeClass('hideRain')
         $(`.w${idx}> .descRainF`).removeClass('hideRain')
         $(`.w${idx}> .descPop`).removeClass('hide')
-        $(`.w${idx}> .descRain`).html('<span class="desc">Rain:</span><br>'+(day.rain).toFixed(0)+'<span class="desc"> mm</span>')
-        $(`.w${idx}> .descRainF`).html('<span class="desc">Rain:</span><br>'+((day.rain)/25.4).toFixed(2)+'<span class="desc"> in</span>')        
+       
         $(`.w${idx}> .descPop`).html('<span class="desc">P.o.P.:</span><br>'+(day.pop*100).toFixed(0)+'<span class="desc"> %</span>')
+        if(day.rain.toFixed(0)< 1){
+            $(`.w${idx}> .descRain`).html('<span class="desc">Rain:</span><br>'+'< 1'+'<span class="desc"> mm</span>')
+            $(`.w${idx}> .descRainF`).html('<span class="desc">Rain:</span><br>'+'< 0.02'+'<span class="desc"> in</span>') 
+        }else{
+            $(`.w${idx}> .descRain`).html('<span class="desc">Rain:</span><br>'+day.rain.toFixed(0)+'<span class="desc"> mm</span>')
+            $(`.w${idx}> .descRainF`).html('<span class="desc">Rain:</span><br>'+(day.rain/25.4).toFixed(2)+'<span class="desc"> in</span>') 
+        }
+    
     }else{
         $(`.w${idx}> .descRain`).addClass('hideRain')
         $(`.w${idx}> .descRainF`).addClass('hideRain')    

@@ -114,8 +114,6 @@ input[type=sumit]{
     display: grid;
     grid-template-rows: 40px 35px 35px 35px 35px;
     grid-template-columns: 1fr;
-    /* animation: scale ease-in 4s; */
-    /* transition: all .5s ease; */
 }
 
 .hide3{
@@ -344,6 +342,10 @@ img{
     display: none;
 }
 
+.hideRain{
+    display: none;
+}
+
 
 @media (max-width: 768px){
     .forecast{
@@ -456,9 +458,6 @@ img{
     }
 
     .hide{
-        display: none;
-    }
-    .hideRain{
         display: none;
     }
 }
