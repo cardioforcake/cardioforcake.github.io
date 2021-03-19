@@ -1,5 +1,7 @@
 # Weather Forecast Web App
 
+#### Github Pages Url: https://cardioforcake.github.io/
+
 ### Bonus features implemented on this webpage
 
     - Will store the last location searched for and display the last searched location data upon reloading the page
@@ -8,3 +10,4 @@
     - Implemented dropdown menu to allow user to select the desired forecast period to be displayed
         - User may click anywhere else on the page to minimize the dropdown menu
     - The forecast data orientation will change when viewed on mobile devices
+
